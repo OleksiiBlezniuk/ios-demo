@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ios-demo/static/css/main.5ff79d02.css",
+    "main.js": "/ios-demo/static/js/main.24340c4c.js",
+    "static/js/453.b418f484.chunk.js": "/ios-demo/static/js/453.b418f484.chunk.js",
+    "static/media/logo.svg": "/ios-demo/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/ios-demo/index.html",
+    "main.5ff79d02.css.map": "/ios-demo/static/css/main.5ff79d02.css.map",
+    "main.24340c4c.js.map": "/ios-demo/static/js/main.24340c4c.js.map",
+    "453.b418f484.chunk.js.map": "/ios-demo/static/js/453.b418f484.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5ff79d02.css",
+    "static/js/main.24340c4c.js"
+  ]
+}

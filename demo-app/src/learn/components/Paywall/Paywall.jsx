@@ -1,6 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
 import './Paywall.css';
+import { useMockedLoader } from '../../../hooks/useMockedLoader';
 
 const PLANS = [
   {
@@ -24,6 +25,7 @@ const PLANS = [
 ];
 
 export const Paywall = ({ isOpened, setIsOpened }) => {
+  const isLoading = useMockedLoader();
 
   return (
     <>
@@ -39,33 +41,40 @@ export const Paywall = ({ isOpened, setIsOpened }) => {
       <div className={cn('paywallWrapper', {
         'paywallOpened': isOpened
       })}>
-        <h2 className='paywallTitle'>
-          Select your plan
+        {isLoading
+          ? <div className='loader'>Loading...</div>
+          : (
+            <>
+              <h2 className='paywallTitle'>
+                Select your plan
 
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              console.log('close');
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    console.log('close');
 
-              setIsOpened(false)
-            }}
-            className='closePaywallButton'
-          >
-            X
-          </button>
-        </h2>
+                    setIsOpened(false)
+                  }}
+                  className='closePaywallButton'
+                >
+                  X
+                </button>
+              </h2>
 
-        <div className='plansWrapper'>
-          {PLANS.map(({ id, title, price, description }) => (
-            <div className='plan' key={id}>
-              <h3 className='planTitle'>{title}</h3>
-              <p className='planDescription'>{description}</p>
-              <p className='planPrice'>{price}$</p>
-            </div>
-          ))}
-        </div>
+              <div className='plansWrapper'>
+                {PLANS.map(({ id, title, price, description }) => (
+                  <div className='plan' key={id}>
+                    <h3 className='planTitle'>{title}</h3>
+                    <p className='planDescription'>{description}</p>
+                    <p className='planPrice'>{price}$</p>
+                  </div>
+                ))}
+              </div>
 
-        <button className='buyButton'>💸 BUY NOW 💸</button>
+              <button className='buyButton'>💸 BUY NOW 💸</button>
+            </>
+          )
+        }
       </div>
     </>
   )

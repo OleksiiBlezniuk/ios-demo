@@ -3,7 +3,7 @@ import './ModuleItem.css';
 import { TopicsList } from '../../TopicsList/TopicsList';
 import { Paywall } from '../../Paywall/Paywall';
 
-export const ModuleItem = ({ title, description }) => {
+export const ModuleItem = ({ title, description, topics }) => {
   const [isTopicOpened, setIsTopicOpened] = useState(false);
   const [isPaywallOpened, setIsPaywallOpened] = useState(false);
 
@@ -44,7 +44,9 @@ export const ModuleItem = ({ title, description }) => {
       </button>
 
       {isTopicOpened && (
-        <TopicsList />
+        <TopicsList
+          topics={topics}
+        />
       )}
 
       <Paywall

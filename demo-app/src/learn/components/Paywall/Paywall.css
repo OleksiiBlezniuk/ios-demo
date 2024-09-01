@@ -44,7 +44,7 @@
 
   z-index: 9;
 
-  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s;
 }
 
 .paywallOpened {

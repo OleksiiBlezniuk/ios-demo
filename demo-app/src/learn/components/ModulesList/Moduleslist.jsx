@@ -1,15 +1,15 @@
 import React from 'react';
-import { MODULES } from './constants';
 import { ModuleItem } from './components/ModuleItem';
 
-export const ModulesList = () => {
+export const ModulesList = ({ modules }) => {
   return (
     <div>
-      {MODULES.map(({ id, title, description }) => (
+      {modules.map(({ id, title, description, topics }) => (
         <ModuleItem
           key={id}
           title={title}
           description={description}
+          topics={topics}
         />
       ))}
     </div>

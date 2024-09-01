@@ -1,0 +1,69 @@
+.moduleWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+}
+
+.moduleIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+
+.moduleTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nameWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px
+}
+
+.moduleDescription {
+  text-align: justify;
+}
+
+.buyButton {
+  color: black;
+  background-color: #ddd;
+  outline: none;
+  text-decoration: none;
+  border: none;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: 800;
+  padding: 12px;
+
+  cursor: pointer;
+}
+
+.openTopicsButton {
+  color: black;
+  background-color: #f9f9f9;
+  outline: none;
+  text-decoration: none;
+  border: none;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: 800;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.openTopicsButton:hover {
+  background-color: #ddd;
+}
+
